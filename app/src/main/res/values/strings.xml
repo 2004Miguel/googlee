@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">correo</string>
+    <string name="go_to_activity2">ir a activity 2</string>
+    <string name="go_to_google">ir a google</string>
+    <string name="go_to_alarma">crear alarma</string>
+    <string name="go_to_llamada">ir a llamada</string>
+
+</resources>
