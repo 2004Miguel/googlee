@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_height="match_parent">
-
+        <!--comentario de prueba-->
         <Button
             android:layout_width="match_parent"
             android:id="@+id/activity2"
