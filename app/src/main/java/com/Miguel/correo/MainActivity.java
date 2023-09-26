@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.view.View;
 import android.widget.Button;
 
@@ -36,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                crearAlarma();
+
+//                para que funcione esto, hubo que agregar estas líneas en el manifest:
+//                este va antes de la etiqueta de aplication
+//                <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+//
+//                 esta va en la etiqueta de intent-filter
+//                <action android:name="android.intent.action.SET_ALARM" />
+//                 <category android:name="android.intent.category.DEFAULT" />
+
+
             }
         });
 
@@ -43,9 +56,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                llamada();
             }
         });
 
 
+    }
+
+    private void crearAlarma() {
+
+        Intent alarma = new Intent(AlarmClock.ACTION_SET_ALARM);
+        alarma.putExtra(AlarmClock.EXTRA_MESSAGE, "gimnasio ");
+        alarma.putExtra(AlarmClock.EXTRA_HOUR, 10);
+        alarma.putExtra(AlarmClock.EXTRA_MINUTES, 30);
+        if(alarma.resolveActivity(getPackageManager())!=null) {
+
+            startActivity(alarma);
+        }
+    }
+
+    public void llamada() {
+        Intent llamada = new Intent(Intent.ACTION_DIAL);
+        llamada.setData(Uri.parse("tel:" + "3148719748"));
+        if (llamada.resolveActivity(getPackageManager()) != null) {
+            startActivity(llamada);
+        }
     }
 }
