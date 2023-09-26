@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent irAGoogle=new Intent(Intent.ACTION_VIEW);
                 irAGoogle.setData(Uri.parse("https://www.google.com"));
+                startActivity(irAGoogle);
 
             }
         });
