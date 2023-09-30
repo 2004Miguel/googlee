@@ -13,5 +13,6 @@ public class Activity2 extends AppCompatActivity {
         setContentView(R.layout.activity_2);
 
         Intent recibir_datos = getIntent();
+        //para poder hacer el commit
     }
 }
