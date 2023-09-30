@@ -7,5 +7,6 @@
     <string name="screen2">Bienvenido</string>
     <string name="camaraf">Tomar foto</string>
     <string name="camarav">Capturar video</string>
+    <string name="mapa">Abrir el mapa</string>
 
 </resources>

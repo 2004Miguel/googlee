@@ -1,6 +1,7 @@
 package com.Miguel.correo;
 
 import android.app.Presentation;
+import android.content.ActivityNotFoundException;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,7 +20,7 @@ import androidx.camera.core.ImageCapture;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button google, alarma, llamada, aactivity2, caamara;
+    Button google, alarma, llamada, aactivity2, caamara, Mapa;
     ImageView visor;
 
     @Override
@@ -32,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
         llamada = findViewById(R.id.go_llamada);
         aactivity2 = findViewById(R.id.activity2);
         caamara = findViewById(R.id.foto);
+        Mapa = findViewById(R.id.go_mapa);
+
+        Mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Build the intent.
+                Uri location = Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+
+                // Try to invoke the intent.
+                try {
+                    startActivity(mapIntent);
+                } catch (ActivityNotFoundException e) {
+                    // Define what your app should do if no activity can handle the intent.
+                }
+            }
+        });
 
         caamara.setOnClickListener(new View.OnClickListener() {
             @Override

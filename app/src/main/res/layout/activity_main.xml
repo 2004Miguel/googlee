@@ -50,8 +50,17 @@
           android:id="@+id/foto"
           android:text="@string/camaraf"
           android:layout_height="wrap_content">
-
       </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/go_mapa"
+            android:text="@string/mapa"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+
 
 
 
