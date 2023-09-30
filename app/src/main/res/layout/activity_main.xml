@@ -45,6 +45,15 @@
 
         </Button>
 
+      <Button
+          android:layout_width="match_parent"
+          android:id="@+id/foto"
+          android:text="@string/camaraf"
+          android:layout_height="wrap_content">
+
+      </Button>
+
+
 
     </LinearLayout>
 

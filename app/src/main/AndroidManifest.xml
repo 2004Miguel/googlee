@@ -4,6 +4,11 @@
 
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true">
+
+
+    </uses-feature>
 
     <application
         android:allowBackup="true"
@@ -14,14 +19,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Correo"
-
         tools:targetApi="31">
+        <activity
+            android:name=".Activity2"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SET_ALARM" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

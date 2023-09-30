@@ -4,5 +4,8 @@
     <string name="go_to_google">ir a google</string>
     <string name="go_to_alarma">crear alarma</string>
     <string name="go_to_llamada">ir a llamada</string>
+    <string name="screen2">Bienvenido</string>
+    <string name="camaraf">Tomar foto</string>
+    <string name="camarav">Capturar video</string>
 
 </resources>
